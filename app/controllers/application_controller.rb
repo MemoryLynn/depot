@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
+  @button_disabled = "false"
+
   private
 
     def current_cart
