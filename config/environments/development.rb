@@ -37,4 +37,15 @@ Depot::Application.configure do
 
   config.assets.compile = true
 
+  # Send mail Configuration
+  config.action_mailer.delivery_method = :stmp
+  config.action_mailer.smtp_settings = {
+    :address               => "smtp.gmail.com",
+    :port                  => 587,
+    :domain                => "domain.of.sender.net",
+    :authentication        => "plain",
+    :user_name             => "dave",
+    :password              => "secret",
+    :enable_starttles_auto => true
+  }
 end
